@@ -1,0 +1,14 @@
+*.pyc
+__pycache__/
+.vscode/
+.DS_Store
+data/
+checkpoints/
+results/
+*.pth
+*.pt
+*.csv
+*.png
+.env
+venv/
+env/

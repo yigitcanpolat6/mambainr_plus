@@ -1,0 +1,33 @@
+# Debug config - small model for testing
+data_path: './data/weather.csv'
+batch_size: 16
+seq_len: 96
+pred_len: 0
+d_model: 64
+n_layers: 2
+n_heads: 4
+n_groups: 8
+mlp_dim: 256
+use_mamba: false
+dropout: 0.1
+embed_type: 'timeF'
+freq: 'h'
+
+epochs: 5
+lr: 1e-3
+weight_decay: 1e-4
+warmup_epochs: 1
+amp: true
+gradient_clip: 1.0
+early_stopping: false
+checkpoint_dir: './checkpoints'
+results_dir: './results'
+device: 'cuda'
+num_workers: 0
+pin_memory: true
+
+missing_rate: 0.3
+missing_type: 'mcar'
+loss_weight_observed: 1.0
+loss_weight_diff: 0.1
+loss_weight_spectral: 0.1

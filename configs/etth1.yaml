@@ -1,0 +1,34 @@
+# ETTh1 dataset config
+data_path: './data/ETTh1.csv'
+batch_size: 32
+seq_len: 96
+pred_len: 0
+d_model: 128
+n_layers: 4
+n_heads: 8
+n_groups: 16
+mlp_dim: 512
+use_mamba: true
+dropout: 0.1
+embed_type: 'timeF'
+freq: 'h'
+
+epochs: 50
+lr: 1e-3
+weight_decay: 1e-4
+warmup_epochs: 5
+amp: true
+gradient_clip: 1.0
+early_stopping: true
+early_stopping_patience: 10
+checkpoint_dir: './checkpoints'
+results_dir: './results'
+device: 'cuda'
+num_workers: 0
+pin_memory: true
+
+missing_rate: 0.3
+missing_type: 'mcar'
+loss_weight_observed: 1.0
+loss_weight_diff: 0.1
+loss_weight_spectral: 0.1
